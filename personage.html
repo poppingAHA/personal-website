@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>personage</title>
+	<style type="text/css">
+	body,a,img,form,h1,table{
+		padding: 0;
+		margin: 0;
+		border:0;
+		list-style: none;
+	}
+	body{
+		height: 2220px; 
+		text-align: center;
+		background-image: url(images/bbg.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.page{
+		width: 800px;
+		height: 2150px;
+		background-color: #eeed;
+		margin-left: 320px;
+		padding: 20px;
+		margin-top: 40px;
+		box-shadow: 8px 8px 10px 5px #999;
+		border-radius: 2%;
+	}
+	#hr1{
+		width: 760px;
+		border:0;
+		height: 2px;
+		background-color: rgb(0,220,150);
+		margin-top: 20px;
+	}
+	#hr2{
+		width: 760px;
+		border:0;
+		height: 3px;
+		background-color: rgb(0,220,150);
+		margin-top: 180px;
+	}
+	#m{
+		background-image: url(images/bg1.png);
+		background-repeat: no-repeat;
+		width: 760px;
+		height: 220px;
+		margin-left: 20px;
+		margin-top: 20px;
+		text-align: center;
+		position: relative;
+	}
+	#ul1{
+		margin-top: 80px;
+		margin-left: 55px;
+		position: absolute;
+		z-index: 50;
+	}
+	a{
+		text-decoration: none;
+		text-align: center;
+		font-family:"楷体"; 
+		font-weight: bold;
+		font-size: 18px;
+		color:#fff;
+	}
+	ul{
+		margin-top: 20px;
+		padding:0;
+		text-align: center;
+		font-family:"楷体"; 
+		font-weight: bold;
+		font-size: 18px;
+		color:#fff;
+	}
+	ul li{
+		display: inline-table;
+		width: 100px;
+		height: 40px;
+		background-color: rgb(0,220,150);
+		box-shadow: 5px 5px 10px 2px #999;
+		padding-top: 18px;
+	}
+	ul li:hover{
+		background-color: rgb(0,200,150);
+	}
+	ul ul{
+		display: none;
+	}
+	ul li:hover>ul{
+		display: block;
+		width: 0px;
+		height: 0px;
+	}
+	ul ul ul{
+		position: relative; 
+		left: 100%; 
+		top: -58Px;
+	}
+	ul ul ul li{
+		background-color: rgb(0,210,150);
+	}
+	ul ul ul li:hover{
+		background-color: rgb(0,190,150);
+	}
+	h1{
+		padding-top: 50px;
+		padding-left: 30px;
+		color: green;
+		font-size: 48px;
+		font-family: "楷体";
+		font-weight: bolder;
+		position: absolute;
+	}
+	#logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: rgba(255,255,255,0.4);
+		margin-top: 10px;
+		margin-left: 30px;
+		animation-name: ball;
+		animation-duration: 10s;
+		transition-timing-function: linear;
+		animation-iteration-count: infinite;
+		position: absolute;
+	}
+	@keyframes ball{
+		10%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 40px;
+			margin-left: 70px;
+		}
+		20%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-left: 90px;
+		}
+		35%{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 120px;
+		}
+		50%{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-right: 170px;
+		}
+		60%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 150px;
+		}
+		75%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-right: 120px;
+		}
+		80%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 100px;
+		}
+		100%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 10px;
+			margin-right: 50px;
+		}
+	}
+	form{
+		padding-top: 20px;
+		padding-left: 450px;
+	}
+	#s1{
+		width: 200px;
+		height: 30px;
+		background-color: rgb(255,255,250);
+		border: rgb(0,190,150) 3px solid;
+		border-radius: 5%;
+	}
+	#s2{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: white 2px solid;
+		background-image: url(images/search.png);
+	}
+	#left{
+		width: 150px;
+		height: 100px;
+		bottom: 50px;
+		margin-left: -200px;
+		padding-top: 0px;
+		position: fixed;
+		border-radius: 5%;
+	}
+	#RL li{
+		width: 120px;
+		height: 20px;
+		background-color: rgb(0,190,150);
+		padding: 5px;
+		margin-top:5px;
+		border-radius: 5%;
+	}
+	.tubiao{
+		border-radius: 50%;
+		width: 15px;
+		height: 15px;
+	}
+	#return{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-image: url(images/zuanshi.png);
+		margin-left: 850px;
+		margin-bottom: 10px;
+	}
+	table{
+		table-layout: fixed;
+		word-break: break-all; 
+		word-wrap: break-word;
+		margin-top: 20px;
+		width: 760px;
+		border: #90ee90 3px solid;
+		border-spacing: 0px;
+	}
+	th,td{
+		border: #90ee90 3px solid;
+		width: 190px;
+		height: 65px;
+	}
+	.tr1{
+		background-color: #90ee90;
+		width: 760px;
+		height: 70px;
+		font-size: 24px;
+		color: #00008b;
+	}
+	.tr2{
+		font-size: 18px;
+	}
+	#aim{
+		margin-top: 18px;
+	}
+	#tu img{
+		width: 240px;
+		height: 140px;
+	}
+	</style>
+</head>
+<body>
+<div class="page">
+	<hr id="hr1" />
+	<div id="m">
+	<h1>球球小屋</h1>
+	<form id="s">
+		<input type="search" placeholder="请输入......" id="s1" />&nbsp<input type="image" id="s2" value="" />
+	</form>
+	<div id="logo"></div>
+	<ul id="ul1">
+		<li><a href="./nav.html">首页</a></li>
+		<li><a href="./personage.html">个人</a>
+			<ul>
+				<li><a href="#jianjie">个人简介</a></li>
+				<li><a href="#aim">个人目标</a></li>
+				<li><a href="#time">日程安排</a></li>
+				<li><a href="#share">生活分享</a>
+					<ul>
+						<li><a href="#food">美食</a></li>
+						<li><a href="#clothes">服饰</a></li>
+						<li><a href="#activity">活动</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./family.html">家庭</a>
+			<ul>
+				<li><a href="./family.html#member">家庭成员</a></li>
+				<li><a href="./family.html#fun">家庭趣事</a></li>
+			</ul>
+		</li>
+		<li><a href="./school.html">学校</a>
+			<ul>
+				<li><a href="./school.html#primary">小学</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>兴趣班</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#junior">初中</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>兴趣小组</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#senior">高中</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>学生社团</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#university">大学</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>学生社团</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./photos.html#Palbum">相册</a>
+			<ul>
+                <li><a href="./photos.html#life">生活</a></li>
+                <li><a href="./photos.html#child">童年</a></li>
+                <li><a href="./photos.html#expression">表情包</a></li>
+                <li><a href="./photos.html#art">绘画作品</a></li>
+                <li><a href="./photos.html#dance">社团活动</a></li>
+			</ul>
+		</li>
+		<li><a href="./message.html">留言板</a>
+			<ul>
+				<li><a href="./message.html#all">全部</a></li>
+				<li><a href="./message.html#self">个人留言</a></li>
+				<li><a href="./message.html#friend">好友留言</a></li>
+			</ul>
+		</li>
+	</ul>
+	<hr id="hr2"/>
+	<div id="left">
+		<ul id="RL">
+			<li><a href="#m">导航栏&nbsp&nbsp<img src="images/daohang.png" class="tubiao"></a></li>
+			<li><a href="#s">搜索框&nbsp&nbsp<img src="images/search.png" class="tubiao"></a></li>
+			<li><a href="#return">滑到底部&nbsp&nbsp<img src="images/shubiao.png" class="tubiao"></a></li>
+		</ul>
+	</div>
+	<div id="jianjie">
+		<table>
+			<tr class="tr1">
+				<th colspan="6">个人简介</th>
+			</tr>
+			<tr class="tr2">
+				<td colspan="2"><b>姓名</b></td>
+				<td colspan="1">蔡秋霞</td>
+				<td colspan="2"><b>性别</b></td>
+				<td colspan="1">女</td>
+			</tr>
+			<tr class="tr2">
+				<td><b>年龄</b></td>
+				<td>19岁</td>
+				<td><b>身高</b></td>
+				<td>154cm</td>
+				<td><b>体重</b></td>
+				<td>50kg</td>
+			</tr>
+			<tr class="tr2">
+				<td colspan="2"><b>电话号码</b></td>
+				<td colspan="1">12345678901</td>
+				<td colspan="2"><b>电子邮箱</b></td>
+				<td colspan="1">1234567890@qq.com</td>
+			</tr>
+			<tr class="tr2">
+				<td colspan="2"><b>QQ账号</b></td>
+				<td>1209798663</td>
+				<td colspan="2"><b>微信账号</b></td>
+				<td>infinite</td>
+			</tr>
+			<tr class="tr2">
+				<td colspan="3"><b>爱好特长</b></td>
+				<td colspan="3">街舞、武术、素描、b-box、魔方</td>
+			</tr>
+			<tr class="tr2">
+				<td colspan="2"><b>个人标签</b></td>
+				<td colspan="4">积极乐观、活泼开朗、乐于助人、勤奋好学</td>
+			</tr>
+			<tr class="tr2">
+				<td colspan="2"><b>个性签言</b></td>
+				<td colspan="4">敢于尝试，不怕丢脸。</td>
+			</tr>
+			<tr class="tr2">
+				<td colspan="2"><b>交友理念</b></td>
+				<td colspan="4">人生不可无友，“有朋自远方来，不亦乐乎！”交友问学的快乐。认识多少人没有意义，能号召多少人才有意义。交友在于质量，而不在于数量。</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table id="aim">
+			<tr class="tr1">
+				<th colspan="2"><b>人生目标</b></th>
+			</tr>
+			<tr class="tr2">
+				<td><b>近期目标</b></td>
+				<td>1.期末考不挂科！2.popping进步！</td>
+			</tr>
+			<tr class="tr2"> 
+				<td><b>远期目标</b></td>
+				<td>当一名原画师！</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table id="time">
+			<tr class="tr1">
+				<th colspan="8"><b>日程安排</b></th>
+			</tr>
+			<tr class="tr2">
+				<td><b>时间</b></td>
+				<td><b>星期一</b></td>
+				<td><b>星期二</b></td>
+				<td><b>星期三</b></td>
+				<td><b>星期四</b></td>
+				<td><b>星期五</b></td>
+				<td><b>星期六</b></td>
+				<td><b>星期日</b></td>
+			</tr>
+			<tr class="tr2">
+				<td><b>一、二节</b></td>
+				<td>程序设计基础</td>
+				<td>思想道德修养与法律基础</td>
+				<td>程序设计基础</td>
+				<td>网页设计基础</td>
+				<td>大学生心理健康教育</td>
+				<td>工作室</td>
+				<td>工作室</td>
+			</tr>
+			<tr class="tr2">
+				<td><b>三、四节</b></td>
+				<td>高等数学B1</td>
+				<td>蹭网页设计课</td>
+				<td>高等数学B1</td>
+				<td>思想道德修养与法律修养</td>
+				<td>高等数学B1</td>
+				<td>工作室</td>
+				<td>工作室</td>
+			</tr>
+			<tr class="tr2">
+				<td><b>五、六节</b></td>
+				<td>工作室</td>
+				<td>网页设计基础</td>
+				<td>生命教育</td>
+				<td>值班</td>
+				<td>程序设计基础</td>
+				<td>Popping课</td>
+				<td>Popping课</td>
+			</tr>
+			<tr class="tr2">
+				<td><b>七、八节</b></td>
+				<td>工作室</td>
+				<td>工作室</td>
+				<td></td>
+				<td>网球（初级）</td>
+				<td>工作室</td>
+				<td>工作室</td>
+				<td>工作室</td>
+			</tr>
+			<tr class="tr2">
+				<td><b>九、十节</b></td>
+				<td>工作室</td>
+				<td>工作室</td>
+				<td>计算机导论</td>
+				<td>军事理论与军事技能</td>
+				<td>工作室</td>
+				<td>工作室</td>
+				<td>工作室</td>
+			</tr>
+			<tr class="tr2">
+				<td><b>十一、十二节</b></td>
+				<td>Popping团训</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table id="share">
+			<tr class="tr1">
+				<th colspan="3">生活分享</th>
+			</tr>
+			<tr class="tr2">
+				<td id="food">美食</td>
+				<td id="clothes">服饰</td>
+				<td id="activity">活动</td>
+			</tr>
+			<tr class="tr2" id="tu">
+				<td><img src="images/momei.png"></td>
+				<td><img src="images/clothes.jpeg"></td>
+				<td><img src="images/game.jpg"></td>
+			</tr>
+		</table>
+	</div>
+	<a href="#m"><div id="return"></div></a>
+</body>
+</html>

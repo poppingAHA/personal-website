@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>message</title>
+	<style type="text/css">
+	body,a,img,form,h1{
+		padding: 0;
+		margin: 0;
+		border:0;
+		list-style: none;
+	}
+	body{
+		height: 1800px; 
+		text-align: center;
+		background-image: url(images/bbg.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.page{
+		width:auto;
+		/*width: 800px;
+		height: 1600px;*/
+		background-color: #eeed;
+		/*margin-left: 320px;*/
+		padding: 20px;
+		margin-top: 40px;
+		box-shadow: 8px 8px 10px 5px #999;
+		border-radius: 2%;
+	}
+	#hr1{
+		width: 760px;
+		border:0;
+		height: 2px;
+		background-color: rgb(0,220,150);
+		margin-top: 20px;
+	}
+	#hr2{
+		width: 760px;
+		border:0;
+		height: 3px;
+		background-color: rgb(0,220,150);
+		margin-top: 180px;
+	}
+	#m{
+		background-image: url(images/bg1.png);
+		background-repeat: no-repeat;
+		width: 760px;
+		height: 220px;
+		margin-left: 20px;
+		margin-top: 20px;
+		text-align: center;
+		position: relative;
+	}
+	#ul1{
+		margin-top: 80px;
+		margin-left: 55px;
+		position: absolute;
+		z-index: 50;
+	}
+	a{
+		text-decoration: none;
+		text-align: center;
+		font-family:"楷体"; 
+		font-weight: bold;
+		font-size: 18px;
+		color:#fff;
+	}
+	ul{
+		margin-top: 20px;
+		padding:0;
+		text-align: center;
+		font-family:"楷体"; 
+		font-weight: bold;
+		font-size: 18px;
+		color:#fff;
+	}
+	ul li{
+		display: inline-table;
+		width: 100px;
+		height: 40px;
+		background-color: rgb(0,220,150);
+		box-shadow: 5px 5px 10px 2px #999;
+		padding-top: 18px;
+	}
+	ul li:hover{
+		background-color: rgb(0,200,150);
+	}
+	ul ul{
+		display: none;
+	}
+	ul li:hover>ul{
+		display: block;
+		width: 0px;
+		height: 0px;
+	}
+	ul ul ul{
+		position: relative; 
+		left: 100%; 
+		top: -58Px;
+	}
+	ul ul ul li{
+		background-color: rgb(0,210,150);
+	}
+	ul ul ul li:hover{
+		background-color: rgb(0,190,150);
+	}
+	h1{
+		padding-top: 50px;
+		padding-left: 30px;
+		color: green;
+		font-size: 48px;
+		font-family: "楷体";
+		font-weight: bolder;
+		position: absolute;
+	}
+	#logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: rgba(255,255,255,0.4);
+		margin-top: 10px;
+		margin-left: 30px;
+		animation-name: ball;
+		animation-duration: 10s;
+		transition-timing-function: linear;
+		animation-iteration-count: infinite;
+		position: absolute;
+	}
+	@keyframes ball{
+		10%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 40px;
+			margin-left: 70px;
+		}
+		20%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-left: 90px;
+		}
+		35%{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 120px;
+		}
+		50%{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-right: 170px;
+		}
+		60%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 150px;
+		}
+		75%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-right: 120px;
+		}
+		80%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 100px;
+		}
+		100%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 10px;
+			margin-right: 50px;
+		}
+	}
+	form{
+		padding-top: 20px;
+		/*padding-left: 450px;*/
+	}
+	#s1{
+		width: 200px;
+		height: 30px;
+		background-color: rgb(255,255,250);
+		border: rgb(0,190,150) 3px solid;
+		border-radius: 5%;
+	}
+	#s2{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: white 2px solid;
+		background-image: url(images/search.png);
+	}
+	#left{
+		width: 150px;
+		height: 100px;
+		bottom: 50px;
+		margin-left: -200px;
+		padding-top: 0px;
+		position: fixed;
+		border-radius: 5%;
+	}
+	#RL li{
+		width: 120px;
+		height: 20px;
+		background-color: rgb(0,190,150);
+		padding: 5px;
+		margin-top:5px;
+		border-radius: 5%;
+	}
+	.tubiao{
+		border-radius: 50%;
+		width: 15px;
+		height: 15px;
+	}
+	#return{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-image: url(images/zuanshi.png);
+		/*margin-left: 850px;*/
+		margin-top: 200px;
+	}
+	#head1{
+		color: #008080;
+		width: 700px;
+		height: 30px;
+		margin-top: -20px;
+	}
+	.head2{
+		width: auto;
+		height: 700px;
+		text-align: left;
+		display: none;
+		background-color: rgba(0,250,154,0.5);
+		border: #66cdaa 3px solid;
+	}
+	#all{
+		margin-top:120px;
+	}
+	#self{
+		margin-top:100px;
+	}
+	#friend{
+		margin-top:100px;
+	}
+	.head2 h2{
+		margin: 30px;
+		padding-top: 10px;
+	}
+	.head2 p{
+		margin-left:40px;
+		margin-right: 40px;
+	}
+	.head2 span{
+		color: #696969;
+		font-size: 12px;
+		/*margin-left: 650px;*/
+	}
+	.smart-green {
+		margin-left:30px;
+		margin-top:20px;
+		max-width: 650px;
+		background: #F8F8F8;
+		padding: 30px 30px 20px 30px;
+		font: 12px Arial, Helvetica, sans-serif;
+		color: #666;
+		border-radius: 5px;
+	}
+	.smart-green h1 {
+		font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+		padding: 20px 0px 20px 40px;
+		display: block;
+		margin: -30px -30px 10px -30px;
+		color: #FFF;
+		background: #66cdaa;
+		text-shadow: 1px 1px 1px #949494;
+		border-radius: 5px 5px 0px 0px;
+		border-bottom:1px solid #66cdaa;
+		width: auto;
+		height: 50px;
+	}
+	.smart-green h1>span {
+		display: block;
+		font-size: 11px;
+		color: #FFF;
+	}
+	.smart-green label {
+		display: block;
+		margin: 0px 0px 5px;
+	}
+	.smart-green label>span {
+		float: left;
+		margin-top: 10px;
+		color: #5E5E5E;
+	}
+	.smart-green input[type="text"], .smart-green input[type="email"], .smart-green textarea, .smart-green select {
+		color: #555;
+		height: 30px;
+		line-height:15px;
+		width: 100%;
+		padding: 0px 0px 0px 10px;
+		margin-top: 2px;
+		border: 1px solid #E5E5E5;
+		background: #FBFBFB;
+		outline: 0;
+		-webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+		box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+		font: normal 14px/14px Arial, Helvetica, sans-serif;
+	}
+	.smart-green textarea{
+		height:100px;
+		padding-top: 10px;
+	}
+	.smart-green select {
+		background: url('down-arrow.png') no-repeat right, linear-gradient(#FBFBFB 0%, #E9E9E9 100%);
+		appearance:none;
+		text-indent: 0.01px;
+		text-overflow: '';
+		width:100%;
+		height:30px;
+	}	
+	.smart-green .button {
+		background-color: #66cdaa;
+		border-radius: 5px;
+		border: none;
+		padding: 10px 25px 10px 25px;
+		color: #FFF;
+		text-shadow: 1px 1px 1px #949494;
+	}
+	.smart-green .button:hover {
+		background-color:#7fffd4;
+	}
+	:target{
+		display: block;
+	}
+	</style>
+</head>
+<body>
+<div class="page">
+	<!-- <hr id="hr1" />
+	<div id="m">
+	<h1>球球小屋</h1>
+	<form id="s">
+		<input type="search" placeholder="请输入......" id="s1" />&nbsp<input type="image" id="s2" value="" />
+	</form>
+	<div id="logo"></div>
+	<ul id="ul1">
+		<li><a href="./nav.html">首页</a></li>
+		<li><a href="./personage.html">个人</a>
+			<ul>
+				<li><a href="./personage.html#jianjie">个人简介</a></li>
+				<li><a href="./personage.html#aim">个人目标</a></li>
+				<li><a href="./personage.html#time">日程安排</a></li>
+				<li><a href="./personage.html#share">生活分享</a>
+					<ul>
+						<li><a href="#food">美食</a></li>
+						<li><a href="#clothes">服饰</a></li>
+						<li><a href="#activity">活动</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./family.html">家庭</a>
+			<ul>
+				<li><a href="./family.html#member">家庭成员</a></li>
+				<li><a href="./family.html#fun">家庭趣事</a></li>
+			</ul>
+		</li>
+		<li><a href="./school.html">学校</a>
+			<ul>
+				<li><a href="./school.html#primary">小学</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>兴趣班</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#junior">初中</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>兴趣小组</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#senior">高中</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>学生社团</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#university">大学</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>学生社团</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./photos.html#Palbum">相册</a>
+			<ul>
+                <li><a href="./photos.html#life">生活</a></li>
+                <li><a href="./photos.html#child">童年</a></li>
+                <li><a href="./photos.html#expression">表情包</a></li>
+                <li><a href="./photos.html#art">绘画作品</a></li>
+                <li><a href="./photos.html#dance">社团活动</a></li>
+			</ul>
+		</li>
+		<li><a href="./message.html">留言板</a>
+			<ul>
+				<li><a href="#all">全部</a></li>
+				<li><a href="#self">个人留言</a></li>
+				<li><a href="#friend">好友留言</a></li>
+			</ul>
+		</li>
+	</ul>
+	<hr id="hr2"/>
+	<div id="left">
+		<ul id="RL">
+			<li><a href="#m">导航栏&nbsp&nbsp<img src="images/daohang.png" class="tubiao"></a></li>
+			<li><a href="#s">搜索框&nbsp&nbsp<img src="images/search.png" class="tubiao"></a></li>
+			<li><a href="#return">滑到底部&nbsp&nbsp<img src="images/shubiao.png" class="tubiao"></a></li>
+		</ul>
+	</div> -->
+	<!-- <h1 id="head1">留言板</h1> -->
+	<div class="head2" id="all">
+		<h2>全部</h2>
+		<p>地狱中最黑暗的地方是为那些在道德危机时刻皂白不辨的人准备的。</p>
+		<span>小明</span>
+		<span>2019.2.4</span>
+		<p>老朋友，多想你在我身旁，看命运变化无常。</p>
+		<span>自己</span>
+		<span>2019.3.5</span>
+		<p>“真正生活的品质，是回到自我，清楚衡量自己的能力与条件，在这有限的条件下追求最好的事物与生活。”</p>
+		<span>小红</span>
+		<span>2019.6.1</span>
+		<p>生活的智慧是懂得，你想要的生活不在远方。生活就是此时此刻此身，幸福也是。</p>
+		<span>自己</span>
+		<span>2019.7.7</span>
+		<p>人生的平凡、平淡、平庸，常归因于一个字：怕。</p>
+		<span>小明</span>
+		<span>2019.8.21</span>
+		<p>人生，就是一段路，或长或短，或弯或直。要么，让身体硬朗地行走；要么，让灵魂高贵地云游。</p>
+		<span>自己</span>
+		<span>2019.12.25</span>
+	</div>
+	<div class="head2" id="self">
+		<h2>个人留言</h2>
+		<p>老朋友，多想你在我身旁，看命运变化无常。</p>
+		<span>自己</span>
+		<span>2019.3.5</span>
+		<p>生活的智慧是懂得，你想要的生活不在远方。生活就是此时此刻此身，幸福也是。</p>
+		<span>自己</span>
+		<span>2019.7.7</span>
+		<p>人生，就是一段路，或长或短，或弯或直。要么，让身体硬朗地行走；要么，让灵魂高贵地云游。</p>
+		<span>自己</span>
+		<span>2019.12.25</span>
+	</div>
+	<div class="head2" id="friend">
+		<h2>好友留言</h2>
+		<p>地狱中最黑暗的地方是为那些在道德危机时刻皂白不辨的人准备的。</p>
+		<span>小明</span>
+		<span>2019.2.4</span>
+		<p>“真正生活的品质，是回到自我，清楚衡量自己的能力与条件，在这有限的条件下追求最好的事物与生活。”</p>
+		<span>小红</span>
+		<span>2019.6.1</span>
+		<p>人生的平凡、平淡、平庸，常归因于一个字：怕。</p>
+		<span>小明</span>
+		<span>2019.8.21</span>
+	</div>
+	<div id="messages">
+		<form class="smart-green">
+			<h1>留言
+				<span>Please fill all the texts in the fields.</span>
+			</h1>
+			<label>
+				<span>你的姓名 :</span>
+				<input id="name" type="text" name="name" placeholder="Your Full Name" />
+			</label>
+
+			<label>
+				<span>你的电子邮箱 :</span>
+				<input id="email" type="email" name="email" placeholder="Valid Email Address" />
+			</label>
+			<label>
+				<span>留言 :</span>
+				<textarea id="message" name="message" placeholder="Your Message to Us"></textarea>
+			</label>
+			<label>
+				<span>提交 :</span><select name="selection">
+				<option value="小明">小明</option>
+				<option value="小红">小红</option>
+				</select>
+			</label>
+			<label>
+				<span>&nbsp</span>
+				<input type="button" class="button" value="发送" />
+			</label>
+		</form>
+	</div>
+	<a href="#m"><div id="return"></div></a>
+</body>
+</html>

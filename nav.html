@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>menu</title>
+	<style type="text/css">
+	body,a,img,form,h1{
+		padding: 0;
+		margin: 0;
+		border:0;
+		list-style: none;
+	}
+	body{
+		height: 970px; 
+		text-align: center;
+		background-image: url(images/back1.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.page{
+		width: 800px;
+		height: 900px;
+		background-color: #eeed;
+		margin-left: 320px;
+		padding: 20px;
+		margin-top: 40px;
+		box-shadow: 8px 8px 10px 5px #999;
+		border-radius: 2%;
+	}
+	#hr1{
+		width: 760px;
+		border:0;
+		height: 2px;
+		background-color: rgb(0,220,150);
+		margin-top: 20px;
+	}
+	#hr2{
+		width: 760px;
+		border:0;
+		height: 3px;
+		background-color: rgb(0,220,150);
+		margin-top: 20px;
+	}
+	#m{
+		background-image: url(images/bg1.png);
+		background-repeat: no-repeat;
+		width: 760px;
+		height: 220px;
+		margin-left: 20px;
+		margin-top: 20px;
+		text-align: center;
+		position: relative;
+	}
+	#ul1{
+		margin-top: 80px;
+		margin-left: 55px;
+		position: absolute;
+		z-index: 50;
+	}
+	a{
+		text-decoration: none;
+		text-align: center;
+		font-family:"楷体"; 
+		font-weight: bold;
+		font-size: 18px;
+		color:#fff;
+	}
+	ul{
+		margin-top: 20px;
+		padding:0;
+		text-align: center;
+		font-family:"楷体"; 
+		font-weight: bold;
+		font-size: 18px;
+		color:#fff;
+	}
+	ul li{
+		display: inline-table;
+		width: 100px;
+		height: 40px;
+		background-color: rgb(0,220,150);
+		box-shadow: 5px 5px 10px 2px #999;
+		padding-top: 18px;
+	}
+	ul li:hover{
+		background-color: rgb(0,200,150);
+	}
+	ul ul{
+		display: none;
+	}
+	ul li:hover>ul{
+		display: block;
+		width: 0px;
+		height: 0px;
+	}
+	ul ul ul{
+		position: relative; 
+		left: 100%; 
+		top: -58Px;
+	}
+	ul ul ul li{
+		background-color: rgb(0,210,150);
+	}
+	ul ul ul li:hover{
+		background-color: rgb(0,190,150);
+	}
+	h1{
+		padding-top: 50px;
+		padding-left: 30px;
+		color: green;
+		font-size: 48px;
+		font-family: "楷体";
+		font-weight: bolder;
+		position: absolute;
+	}
+	#logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: rgba(255,255,255,0.4);
+		margin-top: 10px;
+		margin-left: 30px;
+		animation-name: ball;
+		animation-duration: 10s;
+		transition-timing-function: linear;
+		animation-iteration-count: infinite;
+		position: absolute;
+	}
+	@keyframes ball{
+		10%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 40px;
+			margin-left: 70px;
+		}
+		20%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-left: 90px;
+		}
+		35%{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 120px;
+		}
+		50%{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-right: 170px;
+		}
+		60%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 150px;
+		}
+		75%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 20px;
+			margin-right: 120px;
+		}
+		80%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 30px;
+			margin-right: 100px;
+		}
+		100%{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: rgba(255,255,255,0.4);
+			margin-top: 10px;
+			margin-right: 50px;
+		}
+	}
+	form{
+		padding-top: 20px;
+		padding-left: 450px;
+	}
+	#s1{
+		width: 200px;
+		height: 30px;
+		background-color: rgb(255,255,250);
+		border: rgb(0,190,150) 3px solid;
+		border-radius: 5%;
+	}
+	#s2{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: white 2px solid;
+		background-image: url(images/search.png);
+	}
+	#left{
+		width: 150px;
+		height: 100px;
+		bottom: 50px;
+		margin-left: -200px;
+		padding-top: 0px;
+		position: fixed;
+		border-radius: 5%;
+	}
+	#RL li{
+		width: 120px;
+		height: 20px;
+		background-color: rgb(0,190,150);
+		padding: 5px;
+		margin-top:5px;
+		border-radius: 5%;
+	}
+	.tubiao{
+		border-radius: 50%;
+		width: 15px;
+		height: 15px;
+	}
+	#return{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-image: url(images/zuanshi.png);
+		margin-left: 850px;
+		margin-top: 580px;
+	}
+	#rhombus{
+		width: 400px;
+		height: 400px;
+		transform: rotate(45deg);
+		margin-top: 300px;
+		margin-left: 180px;
+		background-color: #f0fff0;
+		border-radius: 5%;
+		position: absolute;
+		z-index: 20;
+	}
+	.triangle{
+		width: 0;
+		height: 0;
+		border: #f0fff0 150px solid;
+		border-right: 150px solid transparent;
+		border-bottom: 150px solid transparent;
+		border-radius: 5%;
+		position: absolute;
+		z-index: 20;
+	}
+	#triangle1{
+		margin-top: 200px;
+		margin-left: 20px;
+	}
+	#triangle2{
+		margin-top: 200px;
+		margin-left: 440px;
+		transform: rotate(90deg);
+	}
+	#triangle3{
+		margin-top: 500px;
+		margin-left: 440px;
+		transform: rotate(180deg);
+	}
+	#triangle4{
+		margin-top: 500px;
+		margin-left: 20px;
+		transform: rotate(270deg);
+	}
+	h2{
+		color: #5a5aad;
+	}
+	h3{
+		color: #5a5aad;
+	}
+	.sh1{
+		margin-left: -250px;
+		margin-top: 50px;
+		transform: rotate(-45deg);
+	}
+	#ol1{
+		margin-left: 120px;
+		margin-top: -40px;
+	}
+	#ol1 li{
+		width: 80px;
+		height: 50px;
+		color: #9999cc;
+	}
+	.sh2{
+		margin-left: -200px;
+		margin-top: -140px;
+	}
+	#ol2{
+		margin-top: 50px;
+		margin-left:-150px;
+	}
+	#ol2 li{
+		width: 80px;
+		height: 50px;
+		color: #9999cc;
+	}
+	.sh3{
+		transform: rotate(-90deg);
+		margin-left: -250px;
+		margin-top: -100px;
+	}
+	#ol3{
+		margin-left:-50px;
+		margin-top:-50px;
+	}
+	#ol3 li{
+		width: 80px;
+		height: 30px;
+		color: #9999cc;
+	}
+	.sh4{
+		transform: rotate(180deg);
+		margin-top: -130px;
+		margin-left: -180px;
+	}
+	#ol4{
+		margin-top: -20px;
+		margin-left: -40px;
+	}
+	#ol4 li{
+		width: 80px;
+		height: 30px;
+		color: #9999cc;
+	}
+	.sh5{
+		transform: rotate(90deg);
+		margin-top: -100px;
+		margin-left: -230px;
+	}
+	#ol5{
+		margin-left: -80px;
+		margin-top: -80px;
+	}
+	#ol5 li{
+		width: 80px;
+		height: 30px;
+		color: #9999cc;
+	}
+	</style>
+<body>
+	<div class="page">
+	<hr id="hr1" />
+	<div id="m">
+	<h1>球球小屋</h1>
+	<form id="s">
+		<input type="search" placeholder="请输入......" id="s1" />&nbsp<input type="image" id="s2" value="" />
+	</form>
+	<div id="logo"></div>
+	<ul id="ul1">
+		<li><a href="./Personal introduction.html">首页</a></li>
+		<li><a href="./personage.html">个人</a>
+			<ul>
+				<li><a href="./personage.html#jianjie">个人简介</a></li>
+				<li><a href="./personage.html#aim">个人目标</a></li>
+				<li><a href="./personage.html#time">日程安排</a></li>
+				<li><a href="./personage.html#share">生活分享</a>
+					<ul>
+						<li><a href="#food">美食</a></li>
+						<li><a href="#clothes">服饰</a></li>
+						<li><a href="#activity">活动</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./family.html">家庭</a>
+			<ul>
+				<li><a href="./family.html#member">家庭成员</a></li>
+				<li><a href="./family.html#fun">家庭趣事</a></li>
+			</ul>
+		</li>
+		<li><a href="./school.html">学校</a>
+			<ul>
+				<li><a href="./school.html#primary">小学</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>兴趣班</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#junior">初中</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>兴趣小组</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#senior">高中</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>学生社团</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+				<li><a href="./school.html#university">大学</a>
+					<ul>
+						<li>学校</li>
+						<li>班主任</li>
+						<li>学生社团</li>
+						<li>荣誉</li>
+						<li>活动</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./photos.html#Palbum">相册</a>
+			<ul>
+                <li><a href="./photos.html#life">生活</a></li>
+                <li><a href="./photos.html#child">童年</a></li>
+                <li><a href="./photos.html#expression">表情包</a></li>
+                <li><a href="./photos.html#art">绘画作品</a></li>
+                <li><a href="./photos.html#dance">社团活动</a></li>
+			</ul>
+		</li>
+		<li><a href="./message.html">留言板</a>
+			<ul>
+				<li><a href="./message.html#all">全部</a></li>
+				<li><a href="./message.html#self">个人留言</a></li>
+				<li><a href="./message.html#friend">好友留言</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div id="rhombus">
+		<h2 class="sh1">个人</h2>
+		<ol class="sh1" id="ol1">
+			<li>个人简介</li>
+			<li>个人目标</li>
+			<li>日程安排</li>
+			<li>生活分享</li>
+		</ol>
+	</div>
+	<div class="triangle" id="triangle1">
+		<h3 class="sh2">家庭</h3>
+		<ol class="sh2" id="ol2">
+			<li>家庭成员</li>
+			<li>家庭趣事</li>
+		</ol>
+	</div>
+	<div class="triangle" id="triangle2">
+		<h3 class="sh3">学校</h3>
+		<ol class="sh3" id="ol3">
+			<li>小学</li>
+			<li>初中</li>
+			<li>高中</li>
+			<li>大学</li>
+		</ol>
+	</div>
+	<div class="triangle" id="triangle3">
+		<h3 class="sh4">相册</h3>
+		<ol class="sh4" id="ol4">
+			<li>生活</li>
+			<li>童年</li>
+			<li>表情包</li>
+			<li>绘画作品</li>
+			<li>社团活动</li>
+		</ol>
+	</div>
+	<div class="triangle" id="triangle4">
+		<h3 class="sh5">留言板</h3>
+		<ol class="sh5" id="ol5">
+			<li>全部</li>
+			<li>个人留言</li>
+			<li>好友留言</li>
+		</ol>
+	</div>	
+	</div>
+	<hr id="hr2"/>
+	<div id="left">
+		<ul id="RL">
+			<li><a href="#m">导航栏&nbsp&nbsp<img src="images/daohang.png" class="tubiao"></a></li>
+			<li><a href="#s">搜索框&nbsp&nbsp<img src="images/search.png" class="tubiao"></a></li>
+			<li><a href="#return">滑到底部&nbsp&nbsp<img src="images/shubiao.png" class="tubiao"></a></li>
+		</ul>
+	</div>
+	<a href="#m"><div id="return"></div></a>
+</body>
+</html>
